@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.9.13)  2 JAN 2015 11:02
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.9.13)  21 MAY 2015 19:33
 entering extended mode
 **C:/Users/Jake/Desktop/projects/Resume/JakeBesworth_Resume_2015.tex
 (C:/Users/Jake/Desktop/projects/Resume/JakeBesworth_Resume_2015.tex
@@ -121,52 +121,48 @@ File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
 \everyMPtoPDFconversion=\toks21
 )
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <12> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 14.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 19.
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <17.28> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 14.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 19.
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <10> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 16.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 21.
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <9> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 18.
-LaTeX Font Info:    Try loading font information for OMS+phv on input line 24.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 24.
+LaTeX Font Info:    Try loading font information for OMS+phv on input line 50.
  ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\omsphv.fd"
 File: omsphv.fd 
 )
 LaTeX Font Info:    Font shape `OMS/phv/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 24.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 50.
+ [1
+
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <10> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 44.
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 87.
+LaTeX Font Info:    Font shape `OT1/phv/bx/it' in size <10> not available
+(Font)              Font shape `OT1/phv/b/it' tried instead on input line 92.
+LaTeX Font Info:    Font shape `OT1/phv/b/it' in size <10> not available
+(Font)              Font shape `OT1/phv/b/sl' tried instead on input line 92.
+ [2
 
-Overfull \hbox (20.64528pt too wide) in paragraph at lines 41--45
-\OT1/phv/b/n/10 Java GUI Cal-en-dar: \OT1/phv/m/n/10 Small project demon-strat-
-ing class de-sign, poly-mor-phism, AWT/Swing 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 48--51
-
- []
-
-[1
-
-{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}] ) 
+] ) 
 Here is how much of TeX's memory you used:
- 1602 strings out of 493921
- 20562 string characters out of 3144879
+ 1606 strings out of 493921
+ 20607 string characters out of 3144879
  76924 words of memory out of 3000000
- 4930 multiletter control sequences out of 15000+200000
- 15087 words of font info for 28 fonts, out of 3000000 for 9000
+ 4932 multiletter control sequences out of 15000+200000
+ 16846 words of font info for 30 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 29i,5n,35p,272b,168s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files (x86)/
-MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program Files (x86)/MiKTeX 2.9/f
-onts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fon
-ts/type1/urw/helvetic/uhvb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1
-/urw/helvetic/uhvr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/hel
-vetic/uhvro8a.pfb>
-Output written on JakeBesworth_Resume_2015.pdf (1 page, 38560 bytes).
+ 29i,5n,35p,463b,168s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Progr
+am Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program
+ Files (x86)/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Program Files (
+x86)/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvbo8a.pfb><C:/Program Files (x86)/Mi
+KTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9
+/fonts/type1/urw/helvetic/uhvro8a.pfb>
+Output written on JakeBesworth_Resume_2015.pdf (2 pages, 49539 bytes).
 PDF statistics:
- 23 PDF objects out of 1000 (max. 8388607)
+ 30 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
