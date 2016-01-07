@@ -1,125 +1,150 @@
-\documentclass[line, margin]{res}
+\documentclass[10pt]{article}
 
+ %% Packages %%
+ %%\usepackage{kpfonts,baskervald}
 \usepackage{helvet}
 \usepackage{color}
 \usepackage{xcolor}
+\usepackage[margin=1.15in]{geometry}
+\usepackage{comment}
+\usepackage{enumitem}
+\usepackage{setspace}
+\usepackage{scrextend}
+\usepackage{tabto}
 
+ %% Page Indentation and Line Spacing %%
+\setlength{\parskip}{10pt}
+\setlength{\parindent}{0pt}
+\pagenumbering{gobble}
+\addtolength{\topmargin}{-15px}
+\addtolength{\textheight}{1.75in}
+
+ %% Custom colours %%
+\definecolor{linkblue}{RGB}{6,69,173}
 \definecolor{heavygrey}{RGB}{102,102,102}
 \definecolor{darkgrey}{RGB}{51,51,51}
+\definecolor{lightgrey}{RGB}{221,221,221}
 
-\renewcommand{\familydefault}{\sfdefault}
-\begin{document}
-\name{\LARGE{Jake Besworth}}
-
+%% Text wrapping %%
 \tolerance=1
 \emergencystretch=\maxdimen
 \hyphenpenalty=10000
 \hbadness=10000
 
-\begin{resume}
+\renewcommand{\familydefault}{\sfdefault}
+\begin{document}
 
-\section{}
-\parshape 1 -\sectionwidth \resumewidth
+%%Begin%% Header
 {
-	\small{\textbf{School Address \hfill Current Address}}\\}
-	{\color{darkgrey}\small {50 Stone Road East, Guelph ON, Canada -  N1G 2W1} \hfill {Windsor ON, Canada}\\}
-	{\color{darkgrey}\small{} \hfill {jakebesworth@gmail.com\\\\}}
-	{\small{\textbf{\hfill Home Address}}\\}
-	{\color{darkgrey}\hfill \small{Georgetown ON, Canada}
+	\textbf{\huge Jake Besworth}\\
+	\centerline{\rule{15.75cm}{0.4pt}}
+
+	\normalsize{\textbf{School Address \hfill Home Address}}\\[3pt]
+	{\color{darkgrey}\small {50 Stone Road East, Guelph ON, Canada -  N1G 2W1} \hfill {Georgetown ON, Canada\\}
+	 {\color{darkgrey}\small{}\hfill {jakebesworth@gmail.com}}
 }
-
-
-\section{PROGRAMMING}
+%%End%% Header
+%%Begin%% Body
 {
-	\textbf{C - }{\color{darkgrey}Advanced conceptual knowledge and practical experience writing software systems, libraries, parsers and operating system simulation}
+	%%Begin%% Programming
+	{\color{lightgrey}{\centerline{\rule{15.75cm}{0.4pt}}}}
+	\begin{Large}
+		\textbf{\\[10pt]Programming}
+	\end{Large}
+	\begin{itemize}
+		\setlength{\parskip}{6pt}
+		\item\textbf{C, Make}
+			\tabto{2.5cm}{\color{darkgrey}Advanced experience writing full software systems, video games, libraries,}
+			\tabto{2.5cm}{\color{darkgrey}parsers, and operating system simulation programs}
+			
+		\item\textbf{Java}
+			\tabto{2.5cm}{\color{darkgrey}Intermediate experience including class design, polymorphism, inheritance }
+			\tabto{2.5cm}{\color{darkgrey}encapsulation, Abstract Window Toolkit, and Swing}
 
-	\textbf{Web - }{\color{darkgrey}Development, and system integration of Synapp2 Web Application Generator and MVC Framework with Alfresco Community open source ECM. Wide variety of programming including HTML, CSS, JS (AJAX), PHP, MySQL}
+		\item\textbf{Legacy}
+			\tabto{2.5cm}{\color{darkgrey}Experience with Fortran (IV, 77, 95), Ada (95), COBOL, and M68000 Assembly}
+			
+		\item\textbf{Scripting}
+			\tabto{2.5cm}{\color{darkgrey}Projects including Perl back-end, Python Cron jobs, and Bash installers}
 
-	\textbf{Java - }{\color{darkgrey}Understanding and application of Java and various OOP concepts including class design, polymorphism, inheritance, encapsulation, AWT / Swing}
+		\item\textbf{Web}
+			\tabto{2.5cm}{\color{darkgrey}Advanced experience using PHP, SQL (Informix, MySQL and PostgreSQL),}
+			 \tabto{2.5cm}{\color{darkgrey}CSS3, HTML5, Javascript (jQuery, AJAX, Node.js), Git, SVN, MVC, }
+			 \tabto{2.5cm}{\color{darkgrey}Content Management Systems, Amazon Web Services, GNU/Linux}
+	\end{itemize}
+	%%End%% Programming
+	%%Begin%% Experience
+	{\color{lightgrey}{\centerline{\rule{15.75cm}{0.4pt}}}}
+	\begin{Large}
+		\textbf{\\Experience\\}
+	\end{Large}
+	
+	\textbf{Web Application Developer at \textit{Adknown Inc.}}{\color{darkgrey}\hfill{\small{September 2015 to December 2015\\[5pt]}}
+	Worked on dozens of WordPress sites, wrote advanced user tracking softwares, wrote highly efficient cron job scripts, and worked on tools wrapping Amazon Web Services}
+	
+	\textbf{Software Developer at \textit{Dainty Foods}}{\color{darkgrey}\hfill{\small{May 2015 to August 2015\\[5pt]}}
+	Worked primarily on Synapp2 to Alfresco Community and IBM Informix DS database engine integration as well as other smaller development projects}
 
-	\textbf{Legacy - }{\color{darkgrey}Fortran (IV, 77, 95), Ada (95), COBOL, M68000 Assembly}
+	\textbf{Kitchen Steward / Assistant}{\color{darkgrey}\hfill{\small{January 2013 to September 2014 \\[5pt]}}
+	Kitchen at Glen Cairn Golf Club in Milton Ontario, prepared food, cleaned dishes\\}
+	%%End%% Experience
+	%%Begin%% Education
+	{\color{lightgrey}{\centerline{\rule{15.75cm}{0.4pt}}}}
+	\begin{Large}
+		\textbf{\\[10pt]Education\\}
+	\end{Large}
+	
+	\textit{\textbf{University of Guelph}}{\color{darkgrey}{\hfill\small{Expected to Graduate 2018\\}
+	Bachelor of Computing, Software Engineering}}\\\\
+	\textit{\textbf{Georgetown District High School - Honours}}{\color{darkgrey}{\hfill\small{Graduated 2013}\\[10pt]}}
+	%%End%% Education
+	%%Begin%% Page2
+	\clearpage
+	%%Begin%% Header
+	{
+		\textbf{\huge Jake Besworth}\\
+		\centerline{\rule{15.75cm}{0.4pt}}
 
-	\textbf{Scripting - }{\color{darkgrey}Python, Perl, Bash - Scripts from Perl back-end to Bash installers\\[10pt]}
+		\normalsize{\textbf{School Address \hfill Home Address}}\\[3pt]
+		{\color{darkgrey}\small {50 Stone Road East, Guelph ON, Canada -  N1G 2W1} \hfill {Georgetown ON, Canada\\}
+	 	{\color{darkgrey}\small{}\hfill {jakebesworth@gmail.com}}
+	}
+	%%End%% Header
+	%%Begin%% Designs
+	{\color{lightgrey}{\centerline{\rule{15.75cm}{0.4pt}}}}
+	\begin{Large}
+		\textbf{\\\\Designs\\}
+	\end{Large}
+	
+	\textbf{Dialogc Development Environment\\[3pt]}
+	{\color{darkgrey}Design and implementation of a development environment and GUI builder language. C analyzer and parser library (JNI), editor development environment written in Java, Bash installer script}
 
-}
+	\textbf{Python Graphing Calculator\\[3pt]}
+	{\color{darkgrey}Team project demonstrating a Test Driven Development cycle as well as specification restrictions in which a class-less, library restricted Python design was implemented}
 
-\section{DEVELOPMENT}
-{
-	\textbf{Environment}\\
-\begin{itemize}
-	\item \textbf{Linux - }{\color{darkgrey}Debian [Wheezy, Ubuntu], Raspbian, GNOME}
-	\item \textbf{Microsoft Windows - }{\color{darkgrey}95, XP, 7, 8}
-	\item \textbf{OS X - }{\color{darkgrey}Mac / OS X 10.x}
-\end{itemize}
-	\textbf{Methodology}\\
-\begin{itemize}
-	\item {\color{darkgrey}Iterative, Agile, Scrum, Lean}
-	\item {\color{darkgrey}Waterfall}
-	\item {\color{darkgrey}Spiral}
-	\item {\color{darkgrey}Test Driven Development}\\
-\end{itemize}
-}
+	\textbf{Synapp2 Integration\\[3pt]}
+	{\color{darkgrey}Development with free and open source software project Synapp2. Feature implementation, documentation, IBM Informix Dynamic Server software communication, and Alfresco Community ECM plugin integration. Design and development of back-end application generating code, user-level decision-making, and additional data queried business report functionality}
 
-\section{DESIGNS}
-{
-	\textbf{Synapp2 Integration: }{\color{darkgrey}Development with free and open source project Synapp2. Feature implementation and documentation, as well as plugin integration with Alfresco Community ECM. Design and development of back-end application generating code (PHP, HTML, JavaScript), user-level decision-making, and additional data queried business report functionality}
+	\textbf{uMinimal\\[3pt]}
+	{\color{darkgrey}Designed and developed an API-less Youtube web application. The free and open source project uses PHP, Javascript, CSS to build a dynamic video feed by scraping youtube channels, and offers a user controlled RES themed experience.}
 
-	\textbf{Dialogc Development Environment: }{\color{darkgrey}Design and Implementation of a Java Development environment and GUI builder language. C analyzer and parser library (JNI), editor development environment written in Java, Bash installer script}
-
-	\textbf{Python Graphing Calculator: }{\color{darkgrey}Team project demonstrating a Test Driven Development cycle as well as specification restrictions in which a class-less, library restricted Python design was implemented}
-}
-\end{resume}
-\clearpage
-
-\name{\LARGE{Jake Besworth}}
-\begin{resume}
-\section{}
-\parshape 1 -\sectionwidth \resumewidth
-{
-	\small{\textbf{School Address \hfill Current Address}}\\}
-	{\color{darkgrey}\small {50 Stone Road East, Guelph ON, Canada -  N1G 2W1} \hfill {Windsor ON, Canada}\\}
-	{\color{darkgrey}\small{} \hfill {jakebesworth@gmail.com\\\\}
-}
-\section{DESIGNS}
-{
-	\textbf{Asteroids-like Video Game: }{\color{darkgrey}Hobby project written in Make and C using SDL1.2 library demonstrating basic game design and event / state handling as well as cross platform portability}
-
-	\textit{https://github.com/jakebesworth\\}
-}
-
-\section{EDUCATION}
-{
-	\textit{\textbf{University of Guelph}}\color{darkgrey} \hfill Expected to Graduate 2018\\
-	Bachelor of Computing, Software Engineering\\\\
-	\textit{Georgetown District High School Honours} \hfill Graduated 2013\\
-}
-
-\section{EXPERIENCE}
-{
-	\textbf{Software Developer}{\color{darkgrey}\hfill 2015-present \\[3pt]
-	Developer for the Windsor Ontario branch of Dainty Foods, Division of MRRM (CANADA) Inc. Worked primarily on Synapp2 to Alfresco Community and IBM Informix DS database engine integration as well as other development projects}
-
-	\textbf{Kitchen Steward / Assistant}{\color{darkgrey}\hfill 2013-2014 \\[3pt]
-	Kitchen at Glen Cairn Golf Club in Milton Ontario, prepared food, cleaned dishes}
-
-	\textbf{Landscaping and Moving}{\color{darkgrey}\hfill 2009-2011 \\[3pt]
-	Various landscaping and moving jobs in Georgetown Ontario}
-
-	\textbf{Concession}{\color{darkgrey}\hfill 2008-2009 \\[3pt]
-	Various sporting events in Georgetown Ontario - hockey, soccer, football\\}
-}
-
-\section{INTERESTS}
-{
-	\textbf{Video Game Design}\\[3pt]
-	{\color{darkgrey}Programming game mechanics and design of sprites and assets for platform, RPG, and rogue-like games; GML, C, Java}
-
+	\textit{https://github.com/jakebesworth\\[10pt]}
+	%%End%% Designs
+	%%Begin%% Interests
+	{\color{lightgrey}{\centerline{\rule{15.75cm}{0.4pt}}}}
+	\begin{Large}
+		\textbf{\\\\Interests\\}
+	\end{Large}
+	
 	\textbf{Graphic Design}\\[3pt]
-	{\color{darkgrey}Banners, photo restorations, business cards, style website design; Gimp, Fireworks}
+	{\color{darkgrey}Website design and style, banners, photo restorations, business cards; GIMP}
 
-	\textbf{Athletics}\\[3pt]
-	{\color{darkgrey}Sports such as golf, skiing, basketball, and running, some competitively}
+	\textbf{Other Activities}\\[3pt]
+	{\color{darkgrey}Competitive foosball, code golfing, teaching programming, and an interest in free and open source software projects}
+
+	\textbf{Video Game Design}\\[3pt]
+	{\color{darkgrey}Designing game frameworks as well as the designing of audio and visual assets for platform, RPG, and rogue-like games; GML, C, Java\\[10pt]}
+	%%End%% Interests
 }
-
-\end{resume}
+%%End%% Body
 \end{document}
