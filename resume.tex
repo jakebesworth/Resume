@@ -1,149 +1,135 @@
-\documentclass[10pt]{article}
+% Copyright 2016 Jake Besworth
+%
+% Licensed under the Apache License, Version 2.0 (the "License");
+% you may not use this file except in compliance with the License.
+% You may obtain a copy of the License at
+%
+%    http://www.apache.org/licenses/LICENSE-2.0
+%
+% Unless required by applicable law or agreed to in writing, software
+% distributed under the License is distributed on an "AS IS" BASIS,
+% WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+% See the License for the specific language governing permissions and
+% limitations under the License.
 
- %% Packages %%
- %%\usepackage{kpfonts,baskervald}
-\usepackage{helvet}
+%% Extended Article for font-size
+\documentclass[9pt]{extarticle}
+
+%% Black and White vs Design
+%\newcommand*{\PRINT}{}
+
+%% Font
+\usepackage[T1]{fontenc}
+\usepackage{librebaskerville}
+\usepackage{fontawesome}
+\renewcommand{\familydefault}{\rmdefault}
+
+\makeatletter
+\newcommand\HUGE{\@setfontsize\Huge{20pt}{24pt}}
+\makeatother
+
+%% Packages
 \usepackage{color}
 \usepackage{xcolor}
-\usepackage[margin=1.15in]{geometry}
 \usepackage{comment}
 \usepackage{enumitem}
 \usepackage{setspace}
 \usepackage{scrextend}
 \usepackage{tabto}
+\usepackage[margin=1in]{geometry}
+\usepackage{tabularx}
+\usepackage[hidelinks]{hyperref}
 
- %% Page Indentation and Line Spacing %%
+%% Page Indentation and Line Spacing
 \setlength{\parskip}{10pt}
 \setlength{\parindent}{0pt}
+\linespread{1.1}
 \pagenumbering{gobble}
-\addtolength{\topmargin}{-15px}
-\addtolength{\textheight}{1.75in}
+\addtolength{\topmargin}{-0.15in}
+\addtolength{\textheight}{0.75in}
 
- %% Custom colours %%
+%% Custom Colours
 \definecolor{linkblue}{RGB}{6,69,173}
-\definecolor{heavygrey}{RGB}{102,102,102}
-\definecolor{darkgrey}{RGB}{51,51,51}
-\definecolor{lightgrey}{RGB}{221,221,221}
+\definecolor{darkgrey}{RGB}{68,68,68}
+\definecolor{mediumgrey}{RGB}{102,102,102}
 
-%% Text wrapping %%
+\ifdefined\PRINT
+    \definecolor{em-light}{RGB}{0,0,0}
+    \definecolor{lightgrey}{RGB}{221,221,221}
+\else
+    \definecolor{em-light}{RGB}{25,130,232}
+    \definecolor{lightgrey}{RGB}{25,130,232}
+\fi
+
+%% Word Wrap
 \tolerance=1
 \emergencystretch=\maxdimen
 \hyphenpenalty=10000
 \hbadness=10000
 
-\renewcommand{\familydefault}{\sfdefault}
 \begin{document}
 
 %%Begin%% Header
 {
-	\textbf{\huge Jake Besworth}\\
-	\centerline{\rule{15.75cm}{0.4pt}}
+    \begin{tabularx}{\textwidth}{Xr}
+    {\HUGE\leavevmode\color{em-light} Jake Besworth} &
+        \null\hfill\small\begin{tabular}{llX}
+            \faMapMarker\space\space\space\color{darkgrey} Guelph Ontario, Canada & \faEnvelope\space\space\color{darkgrey} \href{mailto:jake@besworth.me}{jake@besworth.me} \\[3px]
+            \faGithub\space\space\color{darkgrey} \href{https://github.com/jakebesworth}{github.com/jakebesworth} & {\large\faMobilePhone}\space\space\space\color{darkgrey} +1 (000) 000 0000 \\[10px]
+        \end{tabular}
+    \end{tabularx}
 
-	\normalsize{\textbf{School Address \hfill Home Address}}\\[3pt]
-	{\color{darkgrey}\small {50 Stone Road East, Guelph ON, Canada -  N1G 2W1} \hfill {Georgetown ON, Canada\\}
-	 {\color{darkgrey}\small{}\hfill {jakebesworth@gmail.com}}
+    {\color{lightgrey}{\centerline{\rule{17cm}{0.4pt}}}}
 }
 %%End%% Header
 %%Begin%% Body
 {
-	%%Begin%% Programming
-	{\color{lightgrey}{\centerline{\rule{15.75cm}{0.4pt}}}}
-	\begin{Large}
-		\textbf{\\[10pt]Programming}
-	\end{Large}
-	\begin{itemize}
-		\setlength{\parskip}{6pt}
-		\item\textbf{C, Make}
-			\tabto{2.5cm}{\color{darkgrey}Advanced experience writing full software systems, video games, libraries,}
-			\tabto{2.5cm}{\color{darkgrey}parsers, and operating system simulation programs}
-			
-		\item\textbf{Java}
-			\tabto{2.5cm}{\color{darkgrey}Intermediate experience including class design, polymorphism, inheritance }
-			\tabto{2.5cm}{\color{darkgrey}encapsulation, Abstract Window Toolkit, and Swing}
+    %%Begin%% Programming
+    \begin{Large}
+        \color{em-light}\textbf{\\[-5pt]Development Expertise\\}
+    \end{Large}
 
-		\item\textbf{Legacy}
-			\tabto{2.5cm}{\color{darkgrey}Experience with Fortran (IV, 77, 95), Ada (95), COBOL, and M68000 Assembly}
-			
-		\item\textbf{Scripting}
-			\tabto{2.5cm}{\color{darkgrey}Projects including Perl back-end, Python Cron jobs, and Bash installers}
+    \begin{tabularx}{\textwidth}{llX}
+    \faHtml5\space\space{\bfseries Front-end}       & {\small\color{darkgrey} \textbullet\space\space HTML5, CSS3, JavaScript (jQuery, Tether)} & \\[5pt]
+                                                    & {\small\color{darkgrey} \textbullet\space\space Bootstrap 3 \& 4, Handlebars, Backbone, Marionette, Webix} & \\[12pt]
+    \faDatabase\space\space{\bfseries Back-end}     & {\small\color{darkgrey} \textbullet\space\space PHP 5 \& 7, Slim 3, WordPress, Composer} & \\[5pt]
+                                                    & {\small\color{darkgrey} \textbullet\space\space Java 8, Spring, Hibernate, JPA, Log4, Apache Tomcat \& Maven} & \\[5pt]
+                                                    & {\small\color{darkgrey} \textbullet\space\space SQL Relational Databases (MySQL \& MariaDB, PostgreSQL, Informix)} & \\[12pt]
+    \faLinux\space\space{\bfseries Environment}     & {\small\color{darkgrey} \textbullet\space\space GNU/Linux (Ubuntu Server, CentOS, RHEL), Windows, OS X} & \\[5pt]
+                                                    & {\small\color{darkgrey} \textbullet\space\space Git, SVN, Bash, Python, Apache HTTP Server} & \\[12pt]
+    \faDesktop\space\space{\bfseries Desktop}       & {\small\color{darkgrey} \textbullet\space\space C11 \& SDL2 \& Make, Java AWT \& Swing, Python TkInter} & \\\\[5pt]
+    \end{tabularx}
+    %%End%% Programming
+    %%Begin%% Experience
+    {\color{lightgrey}{\centerline{\rule{17cm}{0.4pt}}}}
+    \begin{Large}
+        \color{em-light}\textbf{\\[5pt]Experience\\}
+    \end{Large}
 
-		\item\textbf{Web}
-			\tabto{2.5cm}{\color{darkgrey}Advanced experience using PHP, SQL (Informix, MySQL and PostgreSQL),}
-			 \tabto{2.5cm}{\color{darkgrey}CSS3, HTML5, Javascript (jQuery, AJAX, Node.js), Git, SVN, and GNU/Linux}
-	\end{itemize}
-	%%End%% Programming
-	%%Begin%% Experience
-	{\color{lightgrey}{\centerline{\rule{15.75cm}{0.4pt}}}}
-	\begin{Large}
-		\textbf{\\Experience\\}
-	\end{Large}
-	
-	\textbf{Web Application Developer at \textit{Adknown Inc.}}{\color{darkgrey}\hfill{\small{September 2015 to December 2015\\[5pt]}}
-	Worked on dozens of WordPress sites, wrote advanced user tracking softwares, wrote highly efficient cron job scripts, and worked on tools wrapping Amazon Web Services}
-	
-	\textbf{Software Developer at \textit{Dainty Foods}}{\color{darkgrey}\hfill{\small{May 2015 to August 2015\\[5pt]}}
-	Worked primarily on Synapp2 to Alfresco Community and IBM Informix DS database engine integration as well as other smaller development projects}
+    \textbf{Creator of \textit{\href{http://besworth.me/}{Core}}}{\color{darkgrey}\hfill{\small{July 2016 to Present\\[5pt]}}
+        Full stack developer and maintainer of Core Instance Data Storage, an MVP side project. Core is a data processing and storage service built with the latest technologies like Bootstrap 4, Slim 3, and PHP 7.\\
+    }
 
-	\textbf{Kitchen Steward / Assistant}{\color{darkgrey}\hfill{\small{January 2013 to September 2014 \\[5pt]}}
-	Kitchen at Glen Cairn Golf Club in Milton Ontario, prepared food, cleaned dishes\\}
-	%%End%% Experience
-	%%Begin%% Education
-	{\color{lightgrey}{\centerline{\rule{15.75cm}{0.4pt}}}}
-	\begin{Large}
-		\textbf{\\[10pt]Education\\}
-	\end{Large}
-	
-	\textit{\textbf{University of Guelph}}{\color{darkgrey}{\hfill\small{Expected to Graduate 2018\\}
-	Bachelor of Computing, Software Engineering}}\\\\
-	\textit{\textbf{Georgetown District High School - Honours}}{\color{darkgrey}{\hfill\small{Graduated 2013}\\[10pt]}}
-	%%End%% Education
-	%%Begin%% Page2
-	\clearpage
-	%%Begin%% Header
-	{
-		\textbf{\huge Jake Besworth}\\
-		\centerline{\rule{15.75cm}{0.4pt}}
+    \textbf{Web Developer at \textit{Symcor Inc.}}{\color{darkgrey}\hfill{\small{May 2016 to August 2016\\[5pt]}}
+        Worked as a full stack developer in the Enterprise Architecture team. Worked with a full Java stack doing feature implementation on a complex enterprise application used by most of the employees at Symcor. \\
+    }
 
-		\normalsize{\textbf{School Address \hfill Home Address}}\\[3pt]
-		{\color{darkgrey}\small {50 Stone Road East, Guelph ON, Canada -  N1G 2W1} \hfill {Georgetown ON, Canada\\}
-	 	{\color{darkgrey}\small{}\hfill {jakebesworth@gmail.com}}
-	}
-	%%End%% Header
-	%%Begin%% Designs
-	{\color{lightgrey}{\centerline{\rule{15.75cm}{0.4pt}}}}
-	\begin{Large}
-		\textbf{\\\\Designs\\}
-	\end{Large}
-	
-	\textbf{Dialogc Development Environment\\[3pt]}
-	{\color{darkgrey}Design and implementation of a development environment and GUI builder language. C analyzer and parser library (JNI), editor development environment written in Java, Bash installer script}
+    \textbf{Web Application Developer at \textit{Adknown Inc.}}{\color{darkgrey}\hfill{\small{September 2015 to December 2015\\[5pt]}}
+        Worked on dozens of WordPress sites doing system administration, and in-house plugin integration. Wrote highly optimized JavaScript user analyzing scripts, built dynamic JavaScript \& CSS3 ads, and wrote many highly efficient cron job scripts. Designed an Amazon Web Services wrapper web application. \\
+    }
 
-	\textbf{Python Graphing Calculator\\[3pt]}
-	{\color{darkgrey}Team project demonstrating a Test Driven Development cycle as well as specification restrictions in which a class-less, library restricted Python design was implemented}
+    \textbf{Software Developer at \textit{Dainty Foods}}{\color{darkgrey}\hfill{\small{May 2015 to August 2015\\[5pt]}}
+        Worked primarily on feature implementation and integration with \textit{Synapp2} web application builder. Mainly integration with \textit{Alfresco Community ECM} and \textit{IBM Informix DS database engine.}\\
+    }
+    %%End%% Experience
+    %%Begin%% Education
+    {\color{lightgrey}{\centerline{\rule{17cm}{0.4pt}}}}
+    \begin{Large}
+        \color{em-light}\textbf{\\[5pt]Education\\}
+    \end{Large}
 
-	\textbf{Synapp2 Integration\\[3pt]}
-	{\color{darkgrey}Development with free and open source software project Synapp2. Feature implementation, documentation, IBM Informix Dynamic Server software communication, and Alfresco Community ECM plugin integration. Design and development of back-end application generating code, user-level decision-making, and additional data queried business report functionality}
-
-	\textbf{uMinimal\\[3pt]}
-	{\color{darkgrey}Designed and developed an API-less Youtube web application. The free and open source project uses PHP, Javascript, CSS, and MySQL to build a dynamic video feed by scraping youtube channels, and offers a user controlled RES themed experience.}
-
-	\textit{https://github.com/jakebesworth\\[10pt]}
-	%%End%% Designs
-	%%Begin%% Interests
-	{\color{lightgrey}{\centerline{\rule{15.75cm}{0.4pt}}}}
-	\begin{Large}
-		\textbf{\\\\Interests\\}
-	\end{Large}
-	
-	\textbf{Graphic Design}\\[3pt]
-	{\color{darkgrey}Website design and style, banners, photo restorations, business cards; GIMP}
-
-	\textbf{Other Activities}\\[3pt]
-	{\color{darkgrey}Competitive foosball, code golfing, teaching programming, and an interest in free and open source software projects}
-
-	\textbf{Video Game Design}\\[3pt]
-	{\color{darkgrey}Designing game frameworks as well as the designing of audio and visual assets for platform, RPG, and rogue-like games; GML, C, Java\\[10pt]}
-	%%End%% Interests
-}
+    \textit{\textbf{University of Guelph}}{\color{darkgrey}{\hfill\small{Expected to Graduate May 2018\\}
+    Bachelor of Computing, Software Engineering (Co-op)}}
+    %%End%% Education
 %%End%% Body
 \end{document}

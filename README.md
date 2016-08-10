@@ -1,3 +1,9 @@
-# Resume
+# LaTeX Resume
 
-Repository with my latest resume LaTeX code, as well as the compiled pdf
+* Resume template designed by Jake Besworth
+* Feel free to use it, it's licensed under Apache 2.0
+
+* Font: Libre Baskerville
+* Icons: Font Awesome
+* B&W: Uncomment the \PRINT line
+* Looking to hire me? Checkout my website, there's a contact and about page.
