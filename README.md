@@ -6,4 +6,4 @@
 * Font: Libre Baskerville
 * Icons: Font Awesome
 * B&W: Uncomment the \PRINT line
-* Looking to hire me? Checkout my website, there's a contact and about page.
+* Looking to contact me? Checkout my website, there's a contact and about page.
