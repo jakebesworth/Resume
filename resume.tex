@@ -20,8 +20,6 @@
 
 %% Font
 \usepackage[T1]{fontenc}
-% \usepackage{librebaskerville}
-% \usepackage{kpfonts,baskervald}
 \usepackage{ebgaramond}
 \usepackage{fontawesome}
 \usepackage[sfdefault]{FiraSans} %% option 'sfdefault' activates Fira Sans as the default text font
@@ -54,12 +52,12 @@
 
 %% Custom Colours
 \definecolor{linkblue}{RGB}{6,69,173}
-\definecolor{darkgrey}{RGB}{68,68,68}
+\definecolor{darkgrey}{RGB}{75,75,75}
 \definecolor{mediumgrey}{RGB}{102,102,102}
 
 \ifdefined\PRINT
     \definecolor{em-light}{RGB}{0,0,0}
-    \definecolor{lightgrey}{RGB}{221,221,221}
+    \definecolor{lightgrey}{RGB}{225,225,225}
 \else
     \definecolor{em-light}{RGB}{25,130,232}
     \definecolor{lightgrey}{RGB}{25,130,232}
@@ -78,7 +76,7 @@
     \begin{tabularx}{\textwidth}{Xr}
     {\HUGE\leavevmode\color{em-light} Jake Besworth} &
         \null\hfill\small\begin{tabular}{llX}
-            \faMapMarker\space\space\space\color{darkgrey} Toronto, Ontario - Canada & \faEnvelope\space\space\color{darkgrey} \href{mailto:jake@besworth.io}{jake@besworth.io} \\[3px]
+            \faMapMarker\space\space\space\color{darkgrey} Toronto, Ontario, Canada & \faEnvelope\space\space\color{darkgrey} \href{mailto:jake@besworth.io}{jake@besworth.io} \\[3px]
             \faGithub\space\space\color{darkgrey} \href{https://github.com/jakebesworth}{github.com/jakebesworth} & {\large\faMobilePhone}\space\space\space\color{darkgrey} +1 (000) 000 0000 \\[10px]
         \end{tabular}
     \end{tabularx}
@@ -94,17 +92,16 @@
     \end{LARGE}
 
     \begin{tabularx}{\textwidth}{llX}
-    \faHtml5\space\space{\bfseries {\firamedium Front-end}}         & {\color{darkgrey} \textbullet\space\space Vue.js (Vuex, Vue Router, PWA), Sass, Vuetify, Webpack, Mocha \& Karma tests} & \\[5pt]
-                                                                    & {\color{darkgrey} \textbullet\space\space React (Redux, Router), Bootstrap 3 \& 4, Backbone, Angular, jQuery, Jest tests} & \\[12pt]
-    \faDatabase\space\space{\bfseries {\firamedium Back-end}}       & {\color{darkgrey} \textbullet\space\space Python 2 \& 3, Django, Flask, SQLAlchemy} & \\[5pt]
+    \faHtml5\space\space{\bfseries {\firamedium Front End}}         & {\color{darkgrey} \textbullet\space\space Vue.js (Vuex, Vue Router, PWA), Vuetify, Webpack, Material-UI, Mocha \& Karma tests} & \\[5pt]
+                                                                    & {\color{darkgrey} \textbullet\space\space React (Redux \& Mobx, Router, Jest), Bootstrap 4, Backbone, Angular, jQuery, CSS \& SCSS} & \\[12pt]
+    \faDatabase\space\space{\bfseries {\firamedium Back End}}       & {\color{darkgrey} \textbullet\space\space Python 2 \& 3, Django, Flask, SQLAlchemy} & \\[5pt]
                                                                     & {\color{darkgrey} \textbullet\space\space Ruby, Ruby on Rails, Prawn} & \\[5pt]
-                                                                    & {\color{darkgrey} \textbullet\space\space PHP 5 \& 7, Slim 3, WordPress, Symphony} & \\[5pt]
+                                                                    & {\color{darkgrey} \textbullet\space\space PHP 5 \& 7, Slim 3, WordPress, Symphony, CakePHP, Phinx Migrations} & \\[5pt]
                                                                     & {\color{darkgrey} \textbullet\space\space Java, Spring, Hibernate, JPA, JasperReports, Log4j, Apache Tomcat \& Maven} & \\[12pt]
 
     \faLinux\space\space{\bfseries {\firamedium Environment}}       & {\color{darkgrey} \textbullet\space\space MySQL \& MariaDB, PostgreSQL, Informix, Redis, Google Cloud Datastore} & \\[5pt]
-                                                                    & {\color{darkgrey} \textbullet\space\space GNU/Linux (Alpine, CentOS, RHEL), Google Cloud Platform (GKE, GCF), AWS, Digital Ocean} & \\[5pt]
+                                                                    & {\color{darkgrey} \textbullet\space\space GNU/Linux (Alpine, CentOS, RHEL), Google Cloud Platform (GKE, GCF), AWS} & \\[5pt]
                                                                     & {\color{darkgrey} \textbullet\space\space Git, SVN, Bash, Apache, NGINX, Docker, Kubernetes, Make, Node.js} & \\[12pt]
-%%    \faDesktop\space\space{\bfseries Desktop}       & {\small\color{darkgrey} \textbullet\space\space C11 \& SDL2 \& Make, Java AWT \& Swing, Python TkInter} & \\\\[5pt]
     \end{tabularx}
     %%End%% Programming
     %%Begin%% Experience
@@ -113,8 +110,12 @@
         \color{em-light}\textbf{\\[5pt]{\firamedium Work Experience}\\[-8pt]}
     \end{LARGE}
 
-    \textbf{{\firamedium Software Developer at \textit{Tulip Retail}}}{\color{darkgrey}\hfill{\small{May 2018 to Present\\[5pt]}}
-        Software Developer on the Checkout team in Toronto. Accomplished transition of monolith projects to serverless, microservices, and Saas webhooks. Architected Shopify connector, technically led Salesforce Service Cloud \& Marketing Cloud connectors including architecting solutions, technical contact for outsource team, mentoring \& managing co-ops. Helped lead transition to Google Cloud Platform, Vue.js, and Node.js (async/await).\\[-8pt]
+    \textbf{{\firamedium Software Developer II at \textit{Tulip Retail}}}{\color{darkgrey}\hfill{\small{October 2019 to Present\\[5pt]}}
+        Software Developer on the Checkout team in Toronto, on the team since January 2019. Focused on Checkout Payments, Refunds, Receipts, and Orders features. Key developer on Tulip's launched SaaS-based product "Checkout Nova", built from the ground up. Working with Google Cloud Platform, Docker, React.js, and mostly PHP7.\\[-8pt]
+    }
+
+    \textbf{{\firamedium Software Developer at \textit{Tulip Retail}}}{\color{darkgrey}\hfill{\small{May 2018 to September 2019\\[5pt]}}
+        Software Developer on the Innovations team in Toronto. Technical lead for Salesforce Service Cloud \& Marketing Cloud connectors, architected Shopify connector, and mentored co-ops. Accomplished transition of monolith projects to serverless, and service-oriented architecture; using primarily Google Cloud, Docker, Vue.js, and Node.js.\\[-8pt]
     }
 
     \textbf{{\firamedium Undergraduate Teaching Assistant at the \textit{University of Guelph}}}{\color{darkgrey}\hfill{\small{January 2018 to April 2018\\[5pt]}}
@@ -122,17 +123,15 @@
     }
 
     \textbf{{\firamedium Software Engineer (Co-op) at \textit{Wave}}}{\color{darkgrey}\hfill{\small{May 2017 to August 2017\\[5pt]}}
-        Full stack developer on the Accounting team, in Toronto. Worked on the \textit{Next Accounting} software, using Python, Django, React, Docker, and created a highly scalable PDF report generation service, using Ruby on Rails \& Prawn. Developed A/B testing, and analytics for other projects.\\[-8pt]
+        Full-stack developer on the Accounting team in Toronto. Worked on the \textit{Next Accounting} software, using Python, Django, React, and Docker. Developed a highly scalable PDF report generation service, using Ruby on Rails \& Prawn.\\[-8pt]
     }
 
-    \textbf{{\firamedium Full Stack Developer (Co-op) at \textit{Tulip Retail}}}{\color{darkgrey}\hfill{\small{January 2017 to April 2017\\[5pt]}}
-        Full stack web developer on the \textit{Well.ca} team, in Toronto. Primarly focused on front-end design, as well as back-end feature implementations, and bug fixes with PHP \& AWS \& Docker. \\[-8pt]
+    \textbf{{\firamedium Full-Stack Developer (Co-op) at \textit{Tulip Retail}}}{\color{darkgrey}\hfill{\small{January 2017 to April 2017\\[5pt]}}
+        Full-stack web developer on the \textit{Well.ca} team in Toronto. Primarly focused on front-end design, as well as back-end feature implementations, and bug fixes using PHP \& AWS \& Docker. \\[-8pt]
     }
 
-    \textbf{{\firamedium Web Developer (Co-op) at \textit{Symcor Inc.}}}{\color{darkgrey}\hfill{\small{May 2016 to August 2016\\[5pt]}}
-        Full stack developer on the Enterprise Architecture team. Worked with a full Java stack doing feature implementation on a complex web application that collected data on all software at Symcor. \\
+    \textbf{{\firamedium Previous Co-ops at \textit{Symcor Inc.}, \textit{Adknown}, and \textit{Dainty Foods}}}{\color{darkgrey}\hfill{\small{May 2015 to August 2016 \\[-3pt]}}
     }
-
     %%End%% Experience
     %%Begin%% Education
     {\color{lightgrey}{\centerline{\rule{17cm}{0.4pt}}}}
