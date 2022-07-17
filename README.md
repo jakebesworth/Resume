@@ -3,7 +3,7 @@
 **Note: Contact information has been obfuscated for Github version**
 
 * Licensed under Apache 2.0
-* Compiled with PDFLaTeX or LuaLaTeX
-* Font: Libre Baskerville
+* Compiled with PDFLaTeX
+* Font: Fira Sans
 * Icons: Font Awesome
-* Black \& White version, uncomment the `\PRINT` line for color
+* Color accent can be enabled by, uncommenting the `\COLORTITLE` or `\COLORSUBTITLE` lines

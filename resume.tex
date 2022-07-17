@@ -1,4 +1,4 @@
-% Copyright 2020 Jake Besworth
+% Copyright 2022 Jake Besworth
 %
 % Licensed under the Apache License, Version 2.0 (the "License");
 % you may not use this file except in compliance with the License.
@@ -13,21 +13,23 @@
 % limitations under the License.
 
 %% Extended Article for font-size
-\documentclass[9pt]{extarticle}
+\documentclass[11pt]{extarticle}
 
-%% Black and White vs Design
-\newcommand*{\PRINT}{}
+%% Black and White vs Accent Colour
+%% \newcommand*{\COLORTITLE}{}
+%% \newcommand*{\COLORSUBTITLE}{}
 
 %% Font
 \usepackage[T1]{fontenc}
-\usepackage{ebgaramond}
 \usepackage{fontawesome}
 \usepackage[sfdefault]{FiraSans} %% option 'sfdefault' activates Fira Sans as the default text font
-\usepackage[T1]{fontenc}
-\renewcommand*\oldstylenums[1]{{\firaoldstyle #1}}
 
 \makeatletter
-\newcommand\HUGE{\@setfontsize\Huge{20pt}{24pt}}
+\newcommand\NAMESIZE{\@setfontsize\Huge{26}{24pt}}
+\makeatother
+
+\makeatletter
+\newcommand\SUBHEADERSIZE{\@setfontsize\Huge{11.5}{10pt}}
 \makeatother
 
 %% Packages
@@ -38,29 +40,35 @@
 \usepackage{setspace}
 \usepackage{scrextend}
 \usepackage{tabto}
-\usepackage[margin=1in]{geometry}
+\usepackage[margin=0.75in]{geometry} %% Margins
 \usepackage{tabularx}
 \usepackage[hidelinks]{hyperref}
 
 %% Page Indentation and Line Spacing
-\setlength{\parskip}{10pt}
-\setlength{\parindent}{0pt}
-\linespread{1.1}
-\pagenumbering{gobble}
-\addtolength{\topmargin}{-0.25in}
-\addtolength{\textheight}{0.75in}
+\setlength{\parskip}{4pt} %% Paragraph after-height
+\setlength{\parindent}{0pt} %% Paragraph first line indentation
+\linespread{1.2} %% Line Height
+\pagenumbering{gobble} %% No numbered pages
+\addtolength{\topmargin}{-0.15in} %% Margin from top
+\addtolength{\textheight}{0.50in} %% Bottom of page height
 
 %% Custom Colours
-\definecolor{linkblue}{RGB}{6,69,173}
-\definecolor{darkgrey}{RGB}{75,75,75}
-\definecolor{mediumgrey}{RGB}{102,102,102}
+\definecolor{color-paragraph-grey}{RGB}{60,60,60}
+\definecolor{color-date-grey}{RGB}{124,124,124}
+\definecolor{color-line}{RGB}{225,225,225}
 
-\ifdefined\PRINT
-    \definecolor{em-light}{RGB}{0,0,0}
-    \definecolor{lightgrey}{RGB}{225,225,225}
+\ifdefined\COLORTITLE
+    \definecolor{color-title}{RGB}{67,76,238}
 \else
-    \definecolor{em-light}{RGB}{25,130,232}
-    \definecolor{lightgrey}{RGB}{25,130,232}
+    \definecolor{color-title}{RGB}{0,0,0}
+\fi
+
+\ifdefined\COLORSUBTITLE
+    \definecolor{color-vertical-bar}{RGB}{142,60,0}
+    \definecolor{color-subtitle}{RGB}{208,98,0}
+\else
+    \definecolor{color-vertical-bar}{RGB}{100,100,100}
+    \definecolor{color-subtitle}{RGB}{0,0,0}
 \fi
 
 %% Word Wrap
@@ -74,72 +82,87 @@
 %%Begin%% Header
 {
     \begin{tabularx}{\textwidth}{Xr}
-    {\HUGE\leavevmode\color{em-light} Jake Besworth} &
+    {\NAMESIZE\leavevmode\color{color-title} Jake Besworth} &
         \null\hfill\small\begin{tabular}{llX}
-            \faMapMarker\space\space\space\color{darkgrey} Toronto, Ontario, Canada & \faEnvelope\space\space\color{darkgrey} \href{mailto:jake@besworth.io}{jake@besworth.io} \\[3px]
-            \faGithub\space\space\color{darkgrey} \href{https://github.com/jakebesworth}{github.com/jakebesworth} & {\large\faMobilePhone}\space\space\space\color{darkgrey} +1 (000) 000 0000 \\[10px]
+            \faMapMarker\space\space\space\color{color-paragraph-grey} Toronto, Ontario, Canada & \faEnvelope\space\space\color{color-paragraph-grey} \href{mailto:resume@besworth.io}{resume@besworth.io} \\[3px]
+            \faGithub\space\space\color{color-paragraph-grey} \href{https://github.com/jakebesworth}{github.com/jakebesworth} & {\large\faMobilePhone}\space\space\space\color{color-paragraph-grey} (000) 000-0000 \\[10px]
         \end{tabular}
     \end{tabularx}
 
-    {\color{lightgrey}{\centerline{\rule{17cm}{0.4pt}}}}
 }
 %%End%% Header
 %%Begin%% Body
 {
     %%Begin%% Programming
+    {\color{color-line}{\centerline{\rule{18cm}{0.4pt}}}}
+
     \begin{LARGE}
-        \color{em-light}\textbf{\\[-5pt]{\firamedium Development Experience}\\}
+        \color{color-title}\textbf{\\[-5pt]{\firabook Technical Skills}\\}
     \end{LARGE}
 
     \begin{tabularx}{\textwidth}{llX}
-    \faHtml5\space\space{\bfseries {\firamedium Front End}}         & {\color{darkgrey} \textbullet\space\space Vue.js (Vuex, Vue Router, PWA), Vuetify, Webpack, Material-UI, Mocha \& Karma tests} & \\[5pt]
-                                                                    & {\color{darkgrey} \textbullet\space\space React (Redux \& Mobx, Router, Jest), Bootstrap 4, Backbone, CSS \& SCSS} & \\[12pt]
-    \faDatabase\space\space{\bfseries {\firamedium Back End}}       & {\color{darkgrey} \textbullet\space\space Node.js, Express, ECMAScript, TypeScript, Async \& Await} & \\[5pt]
-                                                                    & {\color{darkgrey} \textbullet\space\space PHP 5 \& 7, Slim 3, WordPress, Symphony, CakePHP, Phinx Migrations} & \\[5pt]
-                                                                    & {\color{darkgrey} \textbullet\space\space Python 2 \& 3, Django, Flask, SQLAlchemy} & \\[5pt]
-                                                                    & {\color{darkgrey} \textbullet\space\space Ruby, Ruby on Rails, Prawn} & \\[12pt]
-    \faLinux\space\space{\bfseries {\firamedium Environment}}       & {\color{darkgrey} \textbullet\space\space MySQL \& MariaDB, PostgreSQL, Informix, Redis, Google Cloud Datastore} & \\[5pt]
-                                                                    & {\color{darkgrey} \textbullet\space\space GNU/Linux (Alpine, CentOS, RHEL), Google Cloud Platform (GKE, GCF), AWS} & \\[5pt]
-                                                                    & {\color{darkgrey} \textbullet\space\space Git, SVN, Bash, Apache, NGINX, Docker, Kubernetes, Make} & \\[12pt]
+    {\color{color-subtitle} \faHtml5\space\space{\bfseries {\firamedium Front End}}}
+        & {\color{color-paragraph-grey} \textbullet\space\space Vue.js, Vuex, Vuetify, Webpack, PWA, Mocha \& Karma tests} & \\[2pt]
+        & {\color{color-paragraph-grey} \textbullet\space\space React, Redux, Bootstrap, Jest tests} & \\[10pt]
+
+    {\color{color-subtitle} \faDatabase\space\space{\bfseries {\firamedium Back End}}}
+        & {\color{color-paragraph-grey} \textbullet\space\space PHP, Symfony, CakePHP, Slim, PHPUnit} & \\[2pt]
+        & {\color{color-paragraph-grey} \textbullet\space\space Node.js, Express.js, TypeScript} & \\[5pt]
+        & {\color{color-paragraph-grey} \textbullet\space\space Python, Django, Flask, Godot, GDScript} &  \\[10pt]
+
+    {\color{color-subtitle} \faLinux\space\space{\bfseries {\firamedium Environment}}}
+        & {\color{color-paragraph-grey} \textbullet\space\space MySQL, PostgreSQL, Redis, Google Cloud Platform, AWS} & \\[2pt]
+        & {\color{color-paragraph-grey} \textbullet\space\space GNU/Linux, macOS, Git, Bash, Docker, Kubernetes} & \\[16pt]
     \end{tabularx}
     %%End%% Programming
     %%Begin%% Experience
-    {\color{lightgrey}{\centerline{\rule{17cm}{0.4pt}}}}
+    {\color{color-line}{\centerline{\rule{18cm}{0.4pt}}}}
     \begin{LARGE}
-        \color{em-light}\textbf{\\[5pt]{\firamedium Work Experience}\\[-8pt]}
+        \color{color-title}\textbf{\\[-1pt]{\firabook Work Experience}\\[-8pt]}
     \end{LARGE}
-
-    \textbf{{\firamedium Software Developer II at \textit{Tulip Retail}}}{\color{darkgrey}\hfill{\small{October 2019 to Present\\[5pt]}}
-        Software Developer on the Checkout team in Toronto, on the team since January 2019. Focused on Checkout Payments, Refunds, Receipts, and Orders features. Key developer on Tulip's launched SaaS-based product "Checkout Nova", built from the ground up. Working with Google Cloud Platform, Docker, React.js, and mostly PHP7.\\[-8pt]
+    
+    \firabook{\SUBHEADERSIZE\leavevmode\firamedium{\color{color-subtitle} Tulip Retail} \firabook{{\color{color-vertical-bar}|} \textit{\color{color-subtitle} Software Developer II}}} {\color{color-paragraph-grey}\hfill{\small{{\color{color-date-grey}October 2019 - Present}\\[6pt]}}
+        \begin{tabularx}{\textwidth}{llX}
+            \textbullet\space\space Key contributor on Checkout Payments, Refunds, Receipts, Orders, Discounts, Taxes, Inventory\\
+            \textbullet\space\space Contributions essential to launching Tulip's industry leading iOS Point of Sale product\\
+            \textbullet\space\space Architected features, and led development using {\firamedium PHP Symfony}, {\firamedium Golang}, {\firamedium React.js}, {\firamedium Docker}, and {\firamedium GCP}\\
+            \textbullet\space\space Guided code review standards, promoted best practice discussions, and gave technical talks\\
+            \textbullet\space\space Built developer interview processes, onboarded \& mentored developers on the team\\[-2pt]
+        \end{tabularx}
     }
 
-    \textbf{{\firamedium Software Developer at \textit{Tulip Retail}}}{\color{darkgrey}\hfill{\small{May 2018 to September 2019\\[5pt]}}
-        Software Developer on the Innovations team in Toronto. Technical lead for Salesforce Service Cloud \& Marketing Cloud connectors, architected Shopify connector, and mentored co-ops. Accomplished transition of monolith projects to serverless, and service-oriented architecture; using primarily Google Cloud, Docker, Vue.js, and Node.js.\\[-8pt]
+    \firabook{\SUBHEADERSIZE\leavevmode\firamedium{\color{color-subtitle} Tulip Retail} \firabook{{\color{color-vertical-bar}|} \textit{\color{color-subtitle} Software Developer}}} {\color{color-paragraph-grey}\hfill{\small{{\color{color-date-grey}May 2018 - October 2019}\\[6pt]}}
+        \begin{tabularx}{\textwidth}{llX}
+            \textbullet\space\space Worked on researching technologies, and developing MVP solutions on the Innovations team\\
+            \textbullet\space\space Technical lead on Salesforce connector \& Shopify connector projects, using {\firamedium Node.js}, {\firamedium Vue.js}\\
+            \textbullet\space\space Contributed moving Tulip's API from {\firamedium AWS} to {\firamedium Google Kubernetes Engine}, and {\firamedium Cloud Functions}\\[-2pt]
+        \end{tabularx}
     }
 
-    \textbf{{\firamedium Undergraduate Teaching Assistant at the \textit{University of Guelph}}}{\color{darkgrey}\hfill{\small{January 2018 to April 2018\\[5pt]}}
-        Teacher assisting University of Guelph's CIS*2750 - Software Systems Development and Integration, for 250 students.\\[-8pt]
+    \firabook{\SUBHEADERSIZE\leavevmode\firamedium{\color{color-subtitle} University of Guelph} \firabook{{\color{color-vertical-bar}|} \textit{\color{color-subtitle} Undergraduate Teaching Assistant}}} {\color{color-paragraph-grey}\hfill{\small{{\color{color-date-grey}January 2018 - April 2018}\\[6pt]}}
+        \begin{tabularx}{\textwidth}{llX}
+            \textbullet\space\space Teaching 250 students full-stack web development for Guelph's CIS*2750 course\\
+            \textbullet\space\space Created assignments using {\firamedium Node.js}, {\firamedium Express.js}, {\firamedium MariaDB}, and an automated C test suite\\[-2pt]
+        \end{tabularx}
     }
 
-    \textbf{{\firamedium Software Engineer (Co-op) at \textit{Wave}}}{\color{darkgrey}\hfill{\small{May 2017 to August 2017\\[5pt]}}
-        Full-stack developer on the Accounting team in Toronto. Worked on the \textit{Next Accounting} software, using Python, Django, React, and Docker. Developed a highly scalable PDF report generation service, using Ruby on Rails \& Prawn.\\[-8pt]
+    \firabook{\SUBHEADERSIZE\leavevmode\firamedium{\color{color-subtitle} Wave Financial} \firabook{{\color{color-vertical-bar}|} \textit{\color{color-subtitle} Software Engineer (Co-op)}}} {\color{color-paragraph-grey}\hfill{\small{{\color{color-date-grey}May 2017 - August 2017}\\[6pt]}}
+        \begin{tabularx}{\textwidth}{llX}
+            \textbullet\space\space Worked on the \textit{Next Accounting} financial software, using {\firamedium Python}, {\firamedium Django}, {\firamedium React}, and {\firamedium Docker}\\
+            \textbullet\space\space Architected a highly scalable PDF report generation service, using {\firamedium Ruby on Rails} \& {\firamedium Prawn}\\[-2pt]
+        \end{tabularx}
     }
 
-    \textbf{{\firamedium Full-Stack Developer (Co-op) at \textit{Tulip Retail}}}{\color{darkgrey}\hfill{\small{January 2017 to April 2017\\[5pt]}}
-        Full-stack web developer on the \textit{Well.ca} team in Toronto. Primarly focused on front-end design, as well as back-end feature implementations, and bug fixes using PHP \& AWS \& Docker. \\[-8pt]
-    }
-
-    \textbf{{\firamedium Previous Co-ops at \textit{Symcor Inc.}, \textit{Adknown}, and \textit{Dainty Foods}}}{\color{darkgrey}\hfill{\small{May 2015 to August 2016 \\[-3pt]}}
-    }
     %%End%% Experience
     %%Begin%% Education
-    {\color{lightgrey}{\centerline{\rule{17cm}{0.4pt}}}}
+    {\color{color-line}{\centerline{\rule{18cm}{0.4pt}}}}
     \begin{LARGE}
-        \color{em-light}\textbf{\\[-5pt]{\firamedium Education}\\[-8pt]}
+        \color{color-title}\textbf{\\[-5pt]{\firabook Education}\\[-8pt]}
     \end{LARGE}
 
-    \textit{\textbf{{\firamedium University of Guelph}}}{\color{darkgrey}{\hfill{\small{Graduated in 2018\\[5pt]}}
-    Bachelor of Computing, Software Engineering (Co-op)}}
+    \firabook{\SUBHEADERSIZE\leavevmode\firamedium{\color{color-subtitle} University of Guelph} \firabook{{\color{color-paragraph-grey}\hfill{\small{{\color{color-date-grey}Graduated in 2018}\\[6pt]}}
+        Bachelor of Computing, Software Engineering (Co-op)
+    }
     %%End%% Education
 }
 %%End%% Body
